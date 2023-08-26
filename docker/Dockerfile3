@@ -1,0 +1,8 @@
+# docker build --tag ubuntucmd --file Dockerfile3 .
+# docker run -i ubuntucmd
+# docker run -it ubuntucmd
+#This is a sample Image 
+FROM ubuntu 
+MAINTAINER user@email.com 
+COPY myapp.sh .
+ENTRYPOINT ["./myapp.sh"]

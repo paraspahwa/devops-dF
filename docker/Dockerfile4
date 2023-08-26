@@ -1,0 +1,3 @@
+MAINTAINER "dockerttt@tomekll007.com"
+RUN apt-get install -y git
+ENTRYPOINT ["git"]
