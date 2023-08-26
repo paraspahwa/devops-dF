@@ -1,3 +1,4 @@
-MAINTAINER "dockerttt@tomekll007.com"
-RUN apt-get install -y git
-ENTRYPOINT ["git"]
+# docker build --tag mynginx_image1 --file Dockerfile4 .
+# docker run --name mynginx3 -p 9999:80 -d mynginx_image1
+FROM nginx
+COPY nginx_content /usr/share/nginx/html
