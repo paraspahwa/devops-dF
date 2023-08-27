@@ -1,4 +1,4 @@
 # docker build --tag mynginx_image1 --file Dockerfile4 .
-# docker run --name mynginx3 -p 9999:80 -d mynginx_image1
+# docker run --name some-mysql -e MYSQL_ROOT_PASSWORD_FILE=mysql_secrets -d mysql
 FROM nginx
 COPY nginx_content /usr/share/nginx/html
