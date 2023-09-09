@@ -1,3 +1,0 @@
-# docker build --tag mynginx_image1 --file Dockerfile4 .
-FROM nginx
-COPY nginx_content /usr/share/nginx/html

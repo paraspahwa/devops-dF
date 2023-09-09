@@ -1,6 +1,0 @@
-# docker build --tag ubuntucmd --file Dockerfile0 .
-#This is a sample Image 
-FROM ubuntu 
-MAINTAINER user@email.com 
-#CMD echo welcome
-CMD sleep 5
