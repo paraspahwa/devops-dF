@@ -1,0 +1,14 @@
+version: '3'
+services:
+  java-app:
+    build: hello-world-java
+    ports:
+      - 5000:5000
+  node-app: 
+    build: hello-world-nodejs
+    ports:
+      - 8000:8000
+  python-app:
+    build: hello-world-python
+    ports:
+      - 7000:7000
