@@ -4,7 +4,7 @@ services:
   python-app:
     build: hello-world-python
     ports:
-      - 7000:7000
+      - 7003:7000
   python1-app:
     build: 
       context: ./hello-world-python
