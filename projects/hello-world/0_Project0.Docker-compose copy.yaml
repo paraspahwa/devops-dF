@@ -1,0 +1,7 @@
+# comments sections
+version: '3'
+services:
+  python-app:
+    build: hello-world-python
+    ports:
+      - 7000:7000

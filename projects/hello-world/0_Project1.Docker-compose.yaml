@@ -1,0 +1,14 @@
+# comments sections
+version: '3'
+services:
+  python-app:
+    build: hello-world-python
+    ports:
+      - 7000:7000
+  python1-app:
+    build: 
+      context: ./hello-world-python
+      dockerfile: Dockerfile
+    ports:
+      - 7001:7000
+      - 7002:7000

@@ -1,18 +1,11 @@
+# comments sections
 version: '3'
 services:
   java-app:
     build: hello-world-java
     ports:
       - 5000:5000
-    deploy:
-     resources:
-       limits:
-         cpus: '0.50'
-         memory: 500M
-       reservations:
-         cpus: '0.25'
-         memory: 280M
-  node-app: 
+  node-app:
     build: hello-world-nodejs
     ports:
       - 8000:8000

@@ -3,7 +3,9 @@ services:
   java-app:
     build: hello-world-java
     ports:
-      - 5000:5000
+      - 5000-5002:5000
+      - 5001:5000
+      - 5002:5000
     deploy:
      restart_policy:
        condition: on-failure

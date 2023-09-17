@@ -1,0 +1,28 @@
+#docker stats
+#CONTAINER ID   NAME                       CPU %     MEM USAGE / LIMIT     MEM %     NET I/O       BLOCK I/O   PIDS
+#9c8d6b41b847   hello-world-python-app-1   0.23%     54.07MiB / 7.708GiB   0.69%     1.06kB / 0B   0B / 0B     3
+#ba8ae3ff61b3   hello-world-node-app-1     0.00%     15.7MiB / 7.708GiB    0.20%     1.06kB / 0B   0B / 0B     6
+#271493440c34   hello-world-java-app-1     0.30%     249.7MiB / 7.708GiB   3.16%     1.06kB / 0B   0B / 0B     31
+
+version: '3'
+services:
+  java-app:
+    build: hello-world-java
+    ports:
+      - 5000:5000
+    deploy:
+     resources:
+       limits:
+         cpus: '0.50'
+         memory: 500M
+       reservations:
+         cpus: '0.32'
+         memory: 260M
+  node-app: 
+    build: hello-world-nodejs
+    ports:
+      - 8000:8000
+  python-app:
+    build: https://github.com/cloud99ashwani/devops.git#master:projects/hello-world/hello-world-python
+    ports:
+      - 7000:7000
